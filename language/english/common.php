@@ -15,10 +15,6 @@ if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 define("_CO_IMFAQ_READMORE", "Read more...");
 
 // faq
-define("_CO_IMFAQ_FAQ_FAQ_ID", "Id");
-define("_CO_IMFAQ_FAQ_FAQ_ID_DSC", " ");
-define("_CO_IMFAQ_FAQ_FAQ_QUESTION", "Question");
-define("_CO_IMFAQ_FAQ_FAQ_QUESTION_DSC", " ");
 define("_CO_IMFAQ_FAQ_FAQ_MENUTITLE", "Title in menu");
 define("_CO_IMFAQ_FAQ_FAQ_MENUTITLE_DSC", " ");
 define("_CO_IMFAQ_FAQ_FAQ_ANSWER", "Answer");
@@ -35,8 +31,6 @@ define("_CO_IMFAQ_FAQ_FAQ_PUBLISHED_DATE", "Published Date");
 define("_CO_IMFAQ_FAQ_FAQ_PUBLISHED_DATE_DSC", " ");
 define("_CO_IMFAQ_FAQ_FAQ_CANCOMMENT", "Can Comment?");
 define("_CO_IMFAQ_FAQ_FAQ_CANCOMMENT_DSC", " ");
-define("_CO_IMFAQ_FAQ_FAQ_WEIGHT", "Weight");
-define("_CO_IMFAQ_FAQ_FAQ_WEIGHT_DSC", " ");
 define("_CO_IMFAQ_FAQ_FAQ_ATTACHMENTS", "Attachments");
 define("_CO_IMFAQ_FAQ_FAQ_ATTACHMENTS_DSC", "Click the button \"add attachments\" to select and attach items to this faq");
 define("_CO_IMFAQ_FAQ_LEARNMORE", "To learn more, see the following NAIMA Publications:");

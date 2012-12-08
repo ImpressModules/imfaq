@@ -36,7 +36,7 @@ function imfaq_random_diduno_edit($options){
 	$imfaq_faq_handler = icms_getModuleHandler ( 'faq', 'imfaq' );
 	
 	//sort
-	$sort = array('faq_question'=>_CO_IMFAQ_FAQ_FAQ_QUESTION,'faq_weight'=>_CO_IMFAQ_FAQ_FAQ_WEIGHT,'faq_id'=>_CO_IMFAQ_FAQ_FAQ_ID,'RAND'=>_MB_IMFAQ_ORDERBYRAND);
+	$sort = array('faq_question'=>_MB_IMFAQ_FAQ_FAQ_QUESTION,'faq_weight'=>_MB_IMFAQ_FAQ_FAQ_WEIGHT,'faq_id'=>_MB_IMFAQ_FAQ_FAQ_ID,'RAND'=>_MB_IMFAQ_ORDERBYRAND);
 	$selsort = new XoopsFormSelect ( '', 'options[0]', $options [0] );
 	$selsort->addOptionArray ( $sort );
 		

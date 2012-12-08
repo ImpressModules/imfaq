@@ -25,4 +25,7 @@ define("_MB_IMFAQ_ONLYCURRENTCATEG", "For current category only");
 define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Weight");
 define("_MB_IMFAQ_CATEGORY_CAT_ID", "Id");
 define("_MB_IMFAQ_CATEGORY_CAT_TITLE", "Title");
+define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Question");
+define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Weight");
+define("_MB_IMFAQ_FAQ_FAQ_ID", "Id");
 ?>
