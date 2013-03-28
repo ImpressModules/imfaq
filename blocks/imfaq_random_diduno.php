@@ -24,7 +24,7 @@ function imfaq_random_diduno_show($options){
 	}
 	$cid = in_array(0,$cid)?false:$cid;
 	
-	$faqsArray = $imfaq_faq_handler->getFaqs ( false, $limit, $cid, false, false, $order, $sort, true );
+	$faqsArray = $imfaq_faq_handler->getFaqs ( false, $limit, $cid, false, false, $order, $sort, false );
 	
 	$block = array();
 	$block['faqs'] = $faqsArray;
