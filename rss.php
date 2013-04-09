@@ -39,7 +39,7 @@ foreach($faqsArray as $faqArray) {
 	$imfaq_feed->feeds[] = array (
 	  'title' => $faqArray['faq_title'],
 	  'link' => str_replace('&', '&amp;', $faqArray['itemUrl']),
-	  'description' => htmlspecialchars(str_replace('&', '&amp;', $faqArray['faq_teaser']), ENT_QUOTES),
+	  'description' => htmlspecialchars($faqArray['faq_teaser'], ENT_QUOTES),
 	  'pubdate' => $faqArray['faq_published_date_int'],
 	  'guid' => str_replace('&', '&amp;', $faqArray['itemUrl']),
 	  'category' => $faqArray['faq_cid'],

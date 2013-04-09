@@ -440,12 +440,13 @@ class ImfaqFaq extends IcmsPersistableSeoObject {
 	 * @return array of article info
 	 */
 	function toArray() {
+	$chars = icms::$module -> config['teaser_text'];
 		$ret = parent::toArray ();
 		
 		$ret ['faq_title'] = $this->getVar ( 'faq_question', 'n' );
 		$ret ['faq_menutitle_link'] = $this->getItemLink ( false, false, $this->getVar ( 'faq_menutitle' ) );
 		$ret ['faq_info'] = $this->getFaqInfo ();
-		$ret ['faq_teaser'] = icms_substr ( icms_cleanTags ( $this->getVar ( 'faq_answer','s' ), $aAllowedTags = array('<strong>','<br>','<p>','<em>','<h2>','<h3>','<h4>','<h5>','<h1>','<b>','<u>','<a>','<ul>','<li>'), array () ), 0, 400 );
+		$ret ['faq_teaser'] = icms_substr ( icms_cleanTags ( $this->getVar ( 'faq_answer','s' ), $aAllowedTags = array('<strong>','<p>','<em>','<h4>','<h5>','<a>','<ul>','<li>'), array () ), 0, $chars);
 		$ret ['faq_answer_forprint'] = $this->getVar ( 'faq_answer', 'n' );
 		$ret ['faq_comment_info'] = $this->getCommentsInfo ();
 		$ret ['editItemLink'] = $this->getEditItemLink ( false, true );

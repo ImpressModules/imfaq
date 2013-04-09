@@ -118,4 +118,7 @@ define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY", "New FAQ");
 define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_CAP", "Notify me when any new FAQ is published.");
 define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_DSC", "");
 define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_SBJ", "[{X_SITENAME}] {X_MODULE} auto-notify : New FAQ published");
+
+define("_MI_IMFAQ_TEASERTEXT", "Set characters num. for teaser text");
+define("_MI_IMFAQ_TEASERTEXTDSC", "Tags alloweg in teaser text are: strong, p, em, h4, h5, a, ul, li");
 ?>

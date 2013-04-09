@@ -368,7 +368,14 @@ $modversion['config'][] = array(
   'formtype' => 'yesno',
   'valuetype' => 'int',
   'default' => 1);
-
+$modversion['config'][] = array(	
+	'name' 			=> 'teaser_text',
+	'title' 		=> '_MI_IMFAQ_TEASERTEXT',
+	'description' 	=> '_MI_IMFAQ_TEASERTEXTDSC',
+	'formtype' 		=> 'textbox',
+	'valuetype' 	=> 'int',
+	'default' 		=> 300
+	);
 /** Comments information */
 $modversion['hasComments'] = 1;
 
