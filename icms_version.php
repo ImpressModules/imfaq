@@ -33,8 +33,8 @@ $modversion = array(
 
 /**  Development information */
   'status_version'=> "1.0",
-  'status'=> "Beta",
-  'date'=> "Unreleased",
+  'status'=> "RC",
+  'date'=> "23/04/2013",
   'author_word'=> "",
 
 /** Contributors */
@@ -46,12 +46,12 @@ $modversion['people']['developers'][] = "[url=http://br.linkedin.com/in/therplim
 $modversion['people']['testers'][] = "Andy Cleff";
 //$modversion['people']['translators'][] = "";
 //$modversion['people']['documenters'][] = "";
-//$modversion['people']['other'][] = "";
+$modversion['people']['other'][] = "debianus";
 
 /** Manual */
 $modversion['manual']['wiki'][] = "<a href='http://wiki.impresscms.org/index.php?title=imFAQ' target='_blank'>English</a>";
 
-$modversion['warning'] = _CO_ICMS_WARNING_BETA;
+$modversion['warning'] = _CO_ICMS_WARNING_RC;
 
 /** Administrative information */
 $modversion['hasAdmin'] = 1;

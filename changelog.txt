@@ -1,3 +1,23 @@
-<b><u>=> Unreleased: Version 1.0 Beta</u></b>
+
+Version 1.0 RC
+
+============================
+
+Fixed
+-----
+
+-Teaser text is not coded and HTML tags are not recognized (p, br, bold, em, etc.) #291 
+- Pagination not working #292
+- Block 'Random 'Did you know? not working #293
+- Fixed problem in RSS for Languages with special characters (German, Spanish, etc.)
+
+Improve
+-------
+
+- Adding Preference for set up characters num. in teaser text; less tags allowed.
+
+============================
+
+Unreleased: Version 1.0 Beta
 
 - First public release of the module.
