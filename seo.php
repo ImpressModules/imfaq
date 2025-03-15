@@ -14,7 +14,18 @@
 
 include '../../mainfile.php';
 
-if (empty($_GET['seoOp']))
+$seoMap = array(
+    'category' => 'category.php',
+    'faq' => 'faq.php',
+    'print' => 'print.php'
+);
+
+if(array_key_exists($_GET['seoOp'], $seoMap) || $_GET['seoOp'] = '')
+{
+    $safe_seoOp = $_GET['seoOp'];
+};
+
+if (empty($safe_seoOp))
 {
 	// SEO mode is path-info
 	/*
@@ -30,27 +41,21 @@ if (empty($_GET['seoOp']))
 	// $seoArg = substr($data[1], strlen($seoOp) + 1);
 }
 
-$seoMap = array(
-	'category' => 'category.php',
-	'faq' => 'faq.php',
-	'print' => 'print.php'
-);
-
-if (! empty($_GET['seoOp']) && ! empty($seoMap[$_GET['seoOp']]))
+if (! empty($safe_seoOp) && ! empty($seoMap[$safe_seoOp]))
 {
 	// module specific dispatching logic, other module must implement as
 	// per their requirements.
-	$newUrl = '/modules/imfaq/' . $seoMap[$_GET['seoOp']];
+	$newUrl = '/modules/imfaq/' . $seoMap[$safe_seoOp];
 	if (substr($newUrl,-4) != '.php'){
 		$newUrl .= '.php';
 	}
 
-	$newUrl = str_ireplace('http://'.$_SERVER['SERVER_NAME'],'',ICMS_URL.$newUrl); 
+	$newUrl = str_ireplace('http://'.$_SERVER['SERVER_NAME'],'',ICMS_URL.$newUrl);
 
 	$_ENV['PHP_SELF'] = $newUrl;
 	$_SERVER['SCRIPT_NAME'] = $newUrl;
 	$_SERVER['PHP_SELF'] = $newUrl;
-	switch ($_GET['seoOp']) {
+	switch ($safe_seoOp) {
 		case 'category':
 			$_SERVER['REQUEST_URI'] = $newUrl . '?short_url=' . $_GET['seoArg'];
 			$_GET['short_url'] = $_GET['seoArg'];
@@ -61,9 +66,7 @@ if (! empty($_GET['seoOp']) && ! empty($seoMap[$_GET['seoOp']]))
 			$_SERVER['REQUEST_URI'] = $newUrl . '?short_url=' . $_GET['seoArg'];
 			$_GET['short_url'] = $_GET['seoArg'];
 	}
-	include($_GET['seoOp'] . ".php");
+	include($safe_seoOp . ".php");
 }
 
 exit;
-
-?>
