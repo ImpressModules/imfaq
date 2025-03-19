@@ -13,21 +13,21 @@
 if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
 
-define('_MD_IMFAQ_ADMIN_PAGE', ':: Admin page ::');
+define('_MD_IMFAQ_ADMIN_PAGE', ':: Admin pagina ::');
 
-define("_MD_IMFAQ_ALL_FAQS", "All faqs");
-define("_MD_IMFAQ_ALL_CATEGORYS", "All categorys");
+define("_MD_IMFAQ_ALL_FAQS", "Alle Veelgestelde vragen");
+define("_MD_IMFAQ_ALL_CATEGORYS", "Alle categorieën");
 
-define('_MD_IMFAQ_FAQ_EDIT', 'Edit FAQ');
-define('_MD_IMFAQ_FAQ_SUBMIT', 'Submit a new FAQ');
-define('_MD_IMFAQ_FAQ_REQUEST', 'Request an answer');
-define('_MD_IMFAQ_FAQ_MODIFIED', 'The FAQ was successfully modified.');
-define('_MD_IMFAQ_FAQ_CREATED', 'The FAQ has been successfully created.');
-define('_MD_IMFAQ_SECURITY_CHECK_FAILED', 'Security check failed...');
+define('_MD_IMFAQ_FAQ_EDIT', 'Bewerk FAQ');
+define('_MD_IMFAQ_FAQ_SUBMIT', 'Dien een nieuwe FAQ in');
+define('_MD_IMFAQ_FAQ_REQUEST', 'Vraag een antwoord aan');
+define('_MD_IMFAQ_FAQ_MODIFIED', 'De FAQ is succesvol gewijzigd.');
+define('_MD_IMFAQ_FAQ_CREATED', 'De FAQ is succesvol aangemaakt.');
+define('_MD_IMFAQ_SECURITY_CHECK_FAILED', 'Beveiligingscontrole mislukt...');
 
-define('_MD_IMFAQ_RSS_GLOBAL', 'Subscribe to latest FAQs');
-define('_MD_IMFAQ_RSS_CATEGORY', 'Subscribe to latest FAQs from this category');
-define('_MD_IMFAQ_RSS_POSTER', 'Subscribe to latest FAQs from this poster');
+define('_MD_IMFAQ_RSS_GLOBAL', 'Abonneren op laatste FAQs');
+define('_MD_IMFAQ_RSS_CATEGORY', 'Abonneer je op de nieuwste FAQs vanuit deze categorie');
+define('_MD_IMFAQ_RSS_POSTER', 'Abonneer je op de laatste FAQs van deze poster');
 
-define('_MD_IMFAQ_NOFAQSELECTED','You did not select a valid FAQ!')
+define('_MD_IMFAQ_NOFAQSELECTED','Je hebt geen geldige FAQ geselecteerd!')
 ?>
