@@ -13,21 +13,21 @@
 if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
 
-define('_MD_IMFAQ_ADMIN_PAGE', ':: Admin page ::');
+define('_MD_IMFAQ_ADMIN_PAGE', ':: Admin Seite ::');
 
-define("_MD_IMFAQ_ALL_FAQS", "All faqs");
-define("_MD_IMFAQ_ALL_CATEGORYS", "All categorys");
+define("_MD_IMFAQ_ALL_FAQS", "Alle faqs");
+define("_MD_IMFAQ_ALL_CATEGORYS", "Alle Kategorien");
 
-define('_MD_IMFAQ_FAQ_EDIT', 'Edit FAQ');
-define('_MD_IMFAQ_FAQ_SUBMIT', 'Submit a new FAQ');
-define('_MD_IMFAQ_FAQ_REQUEST', 'Request an answer');
-define('_MD_IMFAQ_FAQ_MODIFIED', 'The FAQ was successfully modified.');
-define('_MD_IMFAQ_FAQ_CREATED', 'The FAQ has been successfully created.');
-define('_MD_IMFAQ_SECURITY_CHECK_FAILED', 'Security check failed...');
+define('_MD_IMFAQ_FAQ_EDIT', 'FAQ bearbeiten');
+define('_MD_IMFAQ_FAQ_SUBMIT', 'Neue FAQ senden');
+define('_MD_IMFAQ_FAQ_REQUEST', 'Antwort anfordern');
+define('_MD_IMFAQ_FAQ_MODIFIED', 'Die FAQ wurde erfolgreich geändert.');
+define('_MD_IMFAQ_FAQ_CREATED', 'Die FAQ wurde erfolgreich erstellt.');
+define('_MD_IMFAQ_SECURITY_CHECK_FAILED', 'Sicherheitsüberprüfung fehlgeschlagen...');
 
-define('_MD_IMFAQ_RSS_GLOBAL', 'Subscribe to latest FAQs');
-define('_MD_IMFAQ_RSS_CATEGORY', 'Subscribe to latest FAQs from this category');
-define('_MD_IMFAQ_RSS_POSTER', 'Subscribe to latest FAQs from this poster');
+define('_MD_IMFAQ_RSS_GLOBAL', 'Aktuelle FAQs abonnieren');
+define('_MD_IMFAQ_RSS_CATEGORY', 'Aktuelle FAQs dieser Kategorie abonnieren');
+define('_MD_IMFAQ_RSS_POSTER', 'Aktuelle FAQs von diesem Poster abonnieren');
 
-define('_MD_IMFAQ_NOFAQSELECTED','You did not select a valid FAQ!')
+define('_MD_IMFAQ_NOFAQSELECTED','Sie haben keine gültige FAQ ausgewählt!')
 ?>
