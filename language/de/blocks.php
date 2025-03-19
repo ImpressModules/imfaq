@@ -12,20 +12,20 @@
 
 if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
-define("_MB_IMFAQ_CATLIST_SHOWSUBS", "Show subcategories:");
-define("_MB_IMFAQ_CATLIST_SORT", "Sort by:");
+define("_MB_IMFAQ_CATLIST_SHOWSUBS", "Unterkategorien anzeigen:");
+define("_MB_IMFAQ_CATLIST_SORT", "Sortieren nach:");
 define("_MB_IMFAQ_CATLIST_ORDER", "Reihenfolge:");
 
-define("_MB_IMFAQ_DIDUNO_LIMIT", "Limit:");
+define("_MB_IMFAQ_DIDUNO_LIMIT", "Begrenzung:");
 define("_MB_IMFAQ_DIDUNO_CATEG", "Kategorie:");
-define("_MB_IMFAQ_ORDERBYRAND", "Random");
-define("_MB_IMFAQ_ALLCATEGS", "All Categories");
-define("_MB_IMFAQ_ONLYCURRENTCATEG", "For current category only");
+define("_MB_IMFAQ_ORDERBYRAND", "Zufällig");
+define("_MB_IMFAQ_ALLCATEGS", "Alle Kategorien");
+define("_MB_IMFAQ_ONLYCURRENTCATEG", "Nur für aktuelle Kategorie");
 
-define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Weight");
+define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Gewicht");
 define("_MB_IMFAQ_CATEGORY_CAT_ID", "Id");
 define("_MB_IMFAQ_CATEGORY_CAT_TITLE", "Titel");
-define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Question");
-define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Weight");
+define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Frage");
+define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Gewicht");
 define("_MB_IMFAQ_FAQ_FAQ_ID", "Id");
 ?>
