@@ -12,20 +12,20 @@
 
 if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
-define("_MB_IMFAQ_CATLIST_SHOWSUBS", "Show subcategories:");
-define("_MB_IMFAQ_CATLIST_SORT", "Sort by:");
+define("_MB_IMFAQ_CATLIST_SHOWSUBS", "Mostra sottocategorie:");
+define("_MB_IMFAQ_CATLIST_SORT", "Ordina per:");
 define("_MB_IMFAQ_CATLIST_ORDER", "Ordine di visualizzazione delle immagini:");
 
-define("_MB_IMFAQ_DIDUNO_LIMIT", "Limit:");
+define("_MB_IMFAQ_DIDUNO_LIMIT", "Limite");
 define("_MB_IMFAQ_DIDUNO_CATEG", "Categoria:");
-define("_MB_IMFAQ_ORDERBYRAND", "Random");
-define("_MB_IMFAQ_ALLCATEGS", "All Categories");
-define("_MB_IMFAQ_ONLYCURRENTCATEG", "For current category only");
+define("_MB_IMFAQ_ORDERBYRAND", "Casuale");
+define("_MB_IMFAQ_ALLCATEGS", "Tutte Le Categorie");
+define("_MB_IMFAQ_ONLYCURRENTCATEG", "Solo per la categoria corrente");
 
-define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Weight");
+define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Peso");
 define("_MB_IMFAQ_CATEGORY_CAT_ID", "Id");
 define("_MB_IMFAQ_CATEGORY_CAT_TITLE", "Titolo");
-define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Question");
-define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Weight");
+define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Domanda");
+define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Peso");
 define("_MB_IMFAQ_FAQ_FAQ_ID", "Id");
 ?>
