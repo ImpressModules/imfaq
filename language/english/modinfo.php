@@ -15,7 +15,6 @@ if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 // Module Info
 // The name of this module
 
-global $icmsModule;
 define("_MI_IMFAQ_MD_NAME", "imFAQ");
 define("_MI_IMFAQ_MD_DESC", "Advanced Questions and Answers Management System for your ImpressCMS Site");
 
@@ -72,7 +71,7 @@ define("_MI_IMFAQ_SEOMODE", "SEO mode");
 define("_MI_IMFAQ_SEOMODEDSC", "Choose from SEO technique.");
 define('_MI_IMFAQ_REQUESTINTROMSG', 'Request introduction message');
 define('_MI_IMFAQ_REQUESTINTROMSGDSC', 'Introduction message to be displayed in the Request a FAQ page of the module.');
-define('_MI_IMFAQ_REQUESTINTROMSG_DEF', "You did not find the answer to the question you were looking for? No problem! Simply fill the following form in order to request the answer for a new question. The site administrator will review your request and publish this new question in the Open Questions section for someone to answer it!"); 
+define('_MI_IMFAQ_REQUESTINTROMSG_DEF', "You did not find the answer to the question you were looking for? No problem! Simply fill the following form in order to request the answer for a new question. The site administrator will review your request and publish this new question in the Open Questions section for someone to answer it!");
 define("_MI_IMFAQ_HEADER", "Index welcome message");
 define("_MI_IMFAQ_HEADERDSC", "Welcome message to be displayed in the index page of the module.");
 define('_MI_IMFAQ_HEADER_DEF', "In this area of our site, you will find the answers to the frequently asked questions. Please feel free to post a comment on any FAQ.");

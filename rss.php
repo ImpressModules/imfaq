@@ -25,12 +25,12 @@ if ($clean_faq_cid){
 	$category = $imfaq_cat_handler->get($clean_faq_cid);
 }
 
-$imfaq_feed->title = $icmsConfig['sitename'] . ' - ' . $icmsModule->name().($clean_faq_cid?' - '.$category->getVar('cat_title','e'):'');
+$imfaq_feed->title = $icmsConfig['sitename'] . ' - ' . icms::$module->name().($clean_faq_cid?' - '.$category->getVar('cat_title','e'):'');
 $imfaq_feed->url = ICMS_URL;
 $imfaq_feed->description = $icmsConfig['slogan'];
 $imfaq_feed->language = _LANGCODE;
 $imfaq_feed->charset = _CHARSET;
-$imfaq_feed->category = $icmsModule->name();
+$imfaq_feed->category = icms::$module->name();
 
 $imfaq_faq_handler = icms_getModuleHandler('faq');
 $faqsArray = $imfaq_faq_handler->getFaqs(0, 20, $clean_faq_cid, false, $clean_faq_uid);

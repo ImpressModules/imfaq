@@ -28,11 +28,11 @@ include_once(IMFAQ_ROOT_PATH . 'include/requirements.php');
 * of those tables are done when the module is updated, we need to force the wemaster to update the
 * module when he first enters the admin side of the module.
 */
-if (is_object($icmsModule) && $icmsModule->dirname() == IMFAQ_DIRNAME) {
+if (is_object(icms::$module) && icms::$module->dirname() == IMFAQ_DIRNAME) {
 	// We are in the module
 	if (defined('XOOPS_CPFUNC_LOADED')) {
 		// We are in the admin side of the module
-		if (!$icmsModule->getDBVersion()) {
+		if (!icms::$module->getDBVersion()) {
 			redirect_header(ICMS_URL . '/modules/system/admin.php?fct=modulesadmin&op=update&module=' . IMFAQ_DIRNAME, 4, _AM_IMFAQ_FIRST_USE);
 			exit;
 		}

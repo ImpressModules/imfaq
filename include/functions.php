@@ -21,9 +21,8 @@ if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
  * @return string URL of the admin side of the module
  */
 function imfaq_getModuleAdminLink($moduleName='imfaq') {
-	global $icmsModule;
-	if (!$moduleName && (isset ($icmsModule) && is_object($icmsModule))) {
-		$moduleName = $icmsModule->getVar('dirname');
+	if (!$moduleName && (isset (icms::$module) && is_object(icms::$module))) {
+		$moduleName = icms::$module->getVar('dirname');
 	}
 	$ret = '';
 	if ($moduleName) {
@@ -274,7 +273,7 @@ function json_encode_string($in_str)
       {
         $json_str ="[";
         $temp = array();
-        for($i=0;$i<$array_length;$i++)       
+        for($i=0;$i<$array_length;$i++)
         {
           $temp[] = sprintf("%s", php_json_encode($arr[$i]));
         }

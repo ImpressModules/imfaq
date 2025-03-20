@@ -22,33 +22,33 @@
  * @return array containing 'name' and 'url' of the related item
  */
 function imfaq_notify_iteminfo($category, $item_id){
-    global $icmsModule, $icmsModuleConfig, $icmsConfig;
+    global $icmsModuleConfig, $icmsConfig;
 
 	// This must contain the name of the folder in which reside SmartPartner
 	if( !defined("IMFAQ_DIRNAME") ){
 		define("IMFAQ_DIRNAME", 'imfaq');
-	}    
+	}
 
-    if (empty($icmsModule) || $icmsModule->getVar('dirname') != IMFAQ_DIRNAME) {
+    if (empty(icms::$module) || icms::$module->getVar('dirname') != IMFAQ_DIRNAME) {
         $module_handler = &xoops_gethandler('module');
         $module = &$module_handler->getByDirname(IMFAQ_DIRNAME);
         $config_handler = &xoops_gethandler('config');
         $config = &$config_handler->getConfigsByCat(0, $module->getVar('mid'));
     } else {
-        $module = &$icmsModule;
+        $module = &icms::$module;
         $config = &$icmsModuleConfig;
-    } 
-    
+    }
+
     if ($category == 'global_faq') {
         $item['name'] = '';
         $item['url'] = '';
     }
-    
+
     if ($category == 'faq') {
     	$imfaq_faq_handler = icms_getModuleHandler ( 'faq','imfaq' );
-    	
+
     	$faqObj = $imfaq_faq_handler->get($item_id);
-    	
+
     	if ($faqObj->isNew()){
         	$item['name'] = '';
         	$item['url'] = '';
@@ -57,7 +57,7 @@ function imfaq_notify_iteminfo($category, $item_id){
         	$item['url'] = $faqObj->getItemLink ( true );
     	}
     }
-    
+
     return $item;
 }
 ?>

@@ -48,7 +48,7 @@ switch ( $op) {
 		
 		icms_cp_header ();
 		
-		$icmsModule->displayAdminMenu ( - 1, _AM_IMFAQ_IMPORT );
+		icms::$module->displayAdminMenu ( - 1, _AM_IMFAQ_IMPORT );
 		
 		include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
 		

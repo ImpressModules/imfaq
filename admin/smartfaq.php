@@ -29,7 +29,7 @@ if (isset ( $_POST ['op'] ) && ($_POST ['op'] == 'go')) {
 if ($op == 'start') {
 	icms_cp_header ();
 	include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-	$icmsModule->displayAdminMenu ( - 1, _AM_IMFAQ_IMPORT );
+	icms::$module->displayAdminMenu ( - 1, _AM_IMFAQ_IMPORT );
 	
 	$result = $xoopsDB->query ( "SELECT COUNT(*) FROM " . $xoopsDB->prefix ( "smartfaq_categories" ) );
 	list ( $totalCat ) = $xoopsDB->fetchRow ( $result );
@@ -86,7 +86,7 @@ if ($op == 'start') {
 
 if ($op == 'go') {
 	icms_cp_header ();
-	$icmsModule->displayAdminMenu ( - 1, _AM_IMFAQ_IMPORT );
+	icms::$module->displayAdminMenu ( - 1, _AM_IMFAQ_IMPORT );
 	
 	$imfaq_faq_handler = icms_getModuleHandler ( 'faq' );
 	$imfaq_category_handler = icms_getModuleHandler ( 'category' );
