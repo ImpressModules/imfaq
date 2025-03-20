@@ -37,7 +37,7 @@ if (in_array ( $clean_op, $valid_op, true )) {
 			
 			icms_cp_header ();
 			
-			$icmsModule->displayAdminMenu ( 0, _AM_IMFAQ_FAQS );
+			icms::$module->displayAdminMenu ( 0, _AM_IMFAQ_FAQS );
 				
 			include_once ICMS_ROOT_PATH . "/kernel/icmspersistabletable.php";
 

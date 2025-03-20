@@ -18,7 +18,7 @@
  * @param int $faq_id Faqid to be edited
  */
 function editfaq($faq_id = 0) {
-	global $imfaq_faq_handler, $icmsModule, $icmsAdminTpl, $imfaqConfig, $xoopsUser;
+	global $imfaq_faq_handler, $icmsAdminTpl, $imfaqConfig, $xoopsUser;
 	
 	$faqObj = $imfaq_faq_handler->get ( $faq_id );
 	
@@ -27,12 +27,12 @@ function editfaq($faq_id = 0) {
 	}
 	
 	if (! $faqObj->isNew ()) {
-		$icmsModule->displayAdminMenu ( 1, _AM_IMFAQ_FAQS . " > " . _CO_ICMS_EDITING );
+		icms::$module->displayAdminMenu ( 1, _AM_IMFAQ_FAQS . " > " . _CO_ICMS_EDITING );
 		$sform = $faqObj->getForm ( _AM_IMFAQ_FAQ_EDIT, 'addfaq' );
 		$sform->assign ( $icmsAdminTpl );
 	
 	} else {
-		$icmsModule->displayAdminMenu ( 1, _AM_IMFAQ_FAQS . " > " . _CO_ICMS_CREATINGNEW );
+		icms::$module->displayAdminMenu ( 1, _AM_IMFAQ_FAQS . " > " . _CO_ICMS_CREATINGNEW );
 		$faqObj->setVar('faq_published_date',time());
 		$faqObj->setVar ( 'faq_uid', $xoopsUser->uid () );
 		$sform = $faqObj->getForm ( _AM_IMFAQ_FAQ_CREATE, 'addfaq' );
@@ -170,7 +170,7 @@ if (in_array ( $clean_op, $valid_op, true )) {
 			
 			icms_cp_header ();
 			
-			$icmsModule->displayAdminMenu ( 1, _AM_IMFAQ_FAQS );
+			icms::$module->displayAdminMenu ( 1, _AM_IMFAQ_FAQS );
 				
 			include_once ICMS_ROOT_PATH . "/kernel/icmspersistabletable.php";
 			$objectTable = new IcmsPersistableTable ( $imfaq_faq_handler );
