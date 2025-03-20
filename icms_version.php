@@ -17,14 +17,14 @@ if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 /**  General Information  */
 $modversion = array(
   'name'=> _MI_IMFAQ_MD_NAME,
-  'version'=> 1.0,
+  'version'=> "1.0.2 alpha",
   'description'=> _MI_IMFAQ_MD_DESC,
-  'author'=> "TheRplima (Rodrigo Pereira Lima)",
-  'credits'=> "INBOX International",
+  'author'=> "fiammybe (David Janssens)",
+  'credits'=> "INBOX International, TheRplima (Rodrigo Pereira Lima)",
   'help'=> "",
   'license'=> "GNU General Public License (GPL)",
   'official'=> 0,
-  'dirname'=> basename( dirname( __FILE__ ) ),
+  'dirname'=> basename(__DIR__),
 
 /**  Images information  */
   'iconsmall'=> "images/icon_small.png",
@@ -32,18 +32,20 @@ $modversion = array(
   'image'=> "images/icon_big.png", /* for backward compatibility */
 
 /**  Development information */
-  'status_version'=> "1.0",
-  'status'=> "Final",
-  'date'=> "10/06/2013",
+  'status_version'=> "1.0.2 alpha",
+  'status'=> "Alpha",
+  'date'=> "20/03/2025",
   'author_word'=> "",
 
 /** Contributors */
-  'developer_website_url' => "http://inboxinternational.com",
-  'developer_website_name' => "INBOX International",
-  'developer_email' => "rodrigo@inboxinternational.com");
+  'developer_website_url' => "https://github.com/ImpressModules/imfaq",
+  'developer_website_name' => "Github",
+  'developer_email' => "david.j@impress.com",);
 
-$modversion['people']['developers'][] = "[url=http://br.linkedin.com/in/therplima]TheRplima (Rodrigo Pereira Lima)[/url]";
-$modversion['people']['testers'][] = "Andy Cleff";
+$modversion['people']['developers'][] = "[url=https://linkedin.com/in/davidjanssens]fiamybe (David Janssens)[/url]";
+$modversion['people']['translators'][] = "[url=https://linkedin.com/in/davidjanssens]fiamybe (David Janssens)[/url]";
+$modversion['people']['other'][] = "[url=https://br.linkedin.com/in/therplima]TheRplima (Rodrigo Pereira Lima)[/url]";
+$modversion['people']['other'][] = "Andy Cleff";
 //$modversion['people']['translators'][] = "";
 //$modversion['people']['documenters'][] = "";
 $modversion['people']['other'][] = "debianus";
@@ -51,7 +53,7 @@ $modversion['people']['other'][] = "debianus";
 /** Manual */
 $modversion['manual']['wiki'][] = "<a href='http://wiki.impresscms.org/index.php?title=imFAQ' target='_blank'>English</a>";
 
-$modversion['warning'] = _CO_ICMS_WARNING_RC;
+$modversion['warning'] = _CO_ICMS_WARNING_ALPHA;
 
 /** Administrative information */
 $modversion['hasAdmin'] = 1;
@@ -77,8 +79,8 @@ $modversion['search'] = array (
 
 /** Menu information */
 $modversion['hasMain'] = 1;
-global $xoopsModule, $xoopsUser, $xoopsModuleConfig;
-if (is_object($xoopsModule) && $xoopsModule->dirname() == $modversion['dirname']) {
+global $xoopsModuleConfig;
+if (is_object(icms::$module) && icms::$module->dirname() == $modversion['dirname']) {
 	$imfaq_faq_handler = icms_getModuleHandler('faq', $modversion['dirname']);
 
 	if (isset($xoopsModuleConfig['faqs_allowsubmit']) && $xoopsModuleConfig['faqs_allowsubmit'] == 1 && $imfaq_faq_handler->userCanSubmit()) {
@@ -368,7 +370,7 @@ $modversion['config'][] = array(
   'formtype' => 'yesno',
   'valuetype' => 'int',
   'default' => 1);
-$modversion['config'][] = array(	
+$modversion['config'][] = array(
 	'name' 			=> 'teaser_text',
 	'title' 		=> '_MI_IMFAQ_TEASERTEXT',
 	'description' 	=> '_MI_IMFAQ_TEASERTEXTDSC',
@@ -437,4 +439,3 @@ $modversion['notification']['event'][] = array(
   'description'=> _MI_IMFAQ_FAQ_APPROVED_NOTIFY_DSC,
   'mail_template'=> 'faq_approved',
   'mail_subject'=> _MI_IMFAQ_FAQ_APPROVED_NOTIFY_SBJ);
-?>
