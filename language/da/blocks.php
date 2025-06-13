@@ -12,20 +12,20 @@
 
 if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
-define("_MB_IMFAQ_CATLIST_SHOWSUBS", "Show subcategories:");
-define("_MB_IMFAQ_CATLIST_SORT", "Sort by:");
-define("_MB_IMFAQ_CATLIST_ORDER", "Order:");
+define("_MB_IMFAQ_CATLIST_SHOWSUBS", "Vis underkategorier:");
+define("_MB_IMFAQ_CATLIST_SORT", "Sortere efter:");
+define("_MB_IMFAQ_CATLIST_ORDER", "Rækkefølge:");
 
-define("_MB_IMFAQ_DIDUNO_LIMIT", "Limit:");
-define("_MB_IMFAQ_DIDUNO_CATEG", "Category:");
-define("_MB_IMFAQ_ORDERBYRAND", "Random");
-define("_MB_IMFAQ_ALLCATEGS", "All Categories");
-define("_MB_IMFAQ_ONLYCURRENTCATEG", "For current category only");
+define("_MB_IMFAQ_DIDUNO_LIMIT", "Antal:");
+define("_MB_IMFAQ_DIDUNO_CATEG", "Kategori:");
+define("_MB_IMFAQ_ORDERBYRAND", "Slumpmæssig");
+define("_MB_IMFAQ_ALLCATEGS", "Alle Kategorier");
+define("_MB_IMFAQ_ONLYCURRENTCATEG", "Kun for den aktuelle kategori");
 
-define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Weight");
-define("_MB_IMFAQ_CATEGORY_CAT_ID", "Id");
-define("_MB_IMFAQ_CATEGORY_CAT_TITLE", "Title");
-define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Question");
-define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Weight");
-define("_MB_IMFAQ_FAQ_FAQ_ID", "Id");
+define("_MB_IMFAQ_CATEGORY_CAT_WEIGHT", "Vægt");
+define("_MB_IMFAQ_CATEGORY_CAT_ID", "ID");
+define("_MB_IMFAQ_CATEGORY_CAT_TITLE", "Titel");
+define("_MB_IMFAQ_FAQ_FAQ_QUESTION", "Spørgsmål");
+define("_MB_IMFAQ_FAQ_FAQ_WEIGHT", "Vægt");
+define("_MB_IMFAQ_FAQ_FAQ_ID", "ID");
 ?>
