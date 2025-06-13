@@ -16,108 +16,114 @@ if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 // The name of this module
 
 global $icmsModule;
-define("_MI_IMFAQ_MD_NAME", "imFAQ");
-define("_MI_IMFAQ_MD_DESC", "Advanced Questions and Answers Management System for your ImpressCMS Site");
+define("_MI_IMFAQ_MD_NAME", "System FAQ");
+define("_MI_IMFAQ_MD_DESC", "Złożone zadania i odpowiedzi zarządzane systemem dla Twojego strony ImpressCMS");
 
-define("_MI_IMFAQ_INDEX", "Index");
-define("_MI_IMFAQ_FAQS", "Faqs");
-define("_MI_IMFAQ_CATEGORYS", "Categories");
-define("_MI_IMFAQ_ATTACHMENTS", "Attachments");
-define("_MI_IMFAQ_IMPORT", "Import");
+define("_MI_IMFAQ_INDEX", "Indeks");
+define("_MI_IMFAQ_FAQS", "FAQ");
+define("_MI_IMFAQ_CATEGORYS", "Kategorie");
+define("_MI_IMFAQ_ATTACHMENTS", "Przykłady");
+define("_MI_IMFAQ_IMPORT", "Importuj");
 
 //Menu
-define('_MI_IMFAQ_FAQ_ADD','Submit new FAQ');
-define('_MI_IMFAQ_REQUEST_ADD','Request an answer');
+define('_MI_IMFAQ_FAQ_ADD','Dodaj nową FAQ');
+define('_MI_IMFAQ_REQUEST_ADD','Żądanie odpowiedzi');
 
 //Blocks
-define('_MI_IMFAQ_CATEGLIST','Category List');
-define('_MI_IMFAQ_CATEGLISTDSC','Block to show a simple category list');
-define('_MI_IMFAQ_RANDOM_DIDUNO','Random "Did you know?"');
-define('_MI_IMFAQ_RANDOM_DIDUNODSC','Block to show a random Did you know question');
-define('_MI_IMFAQ_RECENT_QUESTIONS','Recent Questions');
-define('_MI_IMFAQ_RECENT_QUESTIONSDSC','Block to show the recent questions');
+define('_MI_IMFAQ_CATEGLIST','Lista kategorii');
+define('_MI_IMFAQ_CATEGLISTDSC','Blok prezentujący prostą listę kategorii');
+define('_MI_IMFAQ_RANDOM_DIDUNO','Losowe "Czy wiesz?"');
+define('_MI_IMFAQ_RANDOM_DIDUNODSC','Blok prezentujący losowe pytanie "Czy wiesz?"');
+define('_MI_IMFAQ_RECENT_QUESTIONS','Ostatnie pytania');
+define('_MI_IMFAQ_RECENT_QUESTIONSDSC','Blok prezentujący ostatnie pytania');
 
 // Configs
-define("_MI_IMFAQ_ALLOWSUBMIT", "User submissions");
-define("_MI_IMFAQ_ALLOWSUBMITDSC", "Allow users to submit FAQs on your website?");
-define("_MI_IMFAQ_ALLOWREQUEST", "User requests");
-define("_MI_IMFAQ_ALLOWREQUESTDSC", "Allow users to request FAQs on your website?");
-define('_MI_IMFAQ_DATEFORMAT', 'Date format');
-define('_MI_IMFAQ_DATEFORMATDSC', 'Use the final part of language/english/global.php to select a display style. Example: "d-M-Y H:i" translates to "30-Mar-2004 22:35"');
-define('_MI_IMFAQ_DISPLAY_TOPCAT_DSC', 'Display top categories description?');
-define('_MI_IMFAQ_DISPLAY_TOPCAT_DSCDSC', "Select 'Yes' to display the description of top categories in the index and category page.");
-define('_MI_IMFAQ_TOPCAT_DSC_COUNT', 'Max-length of the top category description');
-define('_MI_IMFAQ_TOPCAT_DSC_COUNTDSC', "Define how much characters will be displayed in the top category description.");
-define('_MI_IMFAQ_DISPLAY_SUBCAT_INDEX', 'Display sub-categories on index?');
-define('_MI_IMFAQ_DISPLAY_SUBCAT_INDEXDSC', "Select 'Yes' to display subcategories on the index page.");
-define('_MI_IMFAQ_DISPLAY_SUBCAT_DSC', 'Display sub-categories description?');
-define('_MI_IMFAQ_DISPLAY_SUBCAT_DSCDSC', "Select 'Yes' to display the description of sub-categories in the index and category page.");
-define('_MI_IMFAQ_SUBCAT_DSC_COUNT', 'Max-length of the top category description');
-define('_MI_IMFAQ_SUBCAT_DSC_COUNTDSC', "Define how much characters will be displayed in the top category description.");
-define('_MI_IMFAQ_DISPLAY_FAQ_ANSWER_SUBCAT', 'Display FAQ answers on sub-categories page?');
+define("_MI_IMFAQ_ALLOWSUBMIT", "Zezwolić użytkownikom na dodawanie FAQ na Twojej stronie");
+define("_MI_IMFAQ_ALLOWSUBMITDSC", "Zezwolić użytkownikom na wysyłanie żądań odpowiedzi na Twojej stronie?");
+define("_MI_IMFAQ_ALLOWREQUEST", "Zezwolić użytkownikom na żądanie odpowiedzi na Twojej stronie?");
+define("_MI_IMFAQ_ALLOWREQUESTDSC", "Zezwolić użytkownikom na żądanie odpowiedzi na Twojej stronie?");
+define('_MI_IMFAQ_DATEFORMAT', 'Format data');
+define('_MI_IMFAQ_DATEFORMATDSC', 'Wybierz ostatni fragment języka/english/global.php, aby wybrać styl wyświetlenia. Przykład: "d-M-Y H:i" przetłumaczy się na "30-Mar-2004 22:35"');
+define('_MI_IMFAQ_DISPLAY_TOPCAT_DSC', 'Wyświetlać opisy kategorii na górze?');
+define('_MI_IMFAQ_DISPLAY_TOPCAT_DSCDSC', "Wybierz \"Tak\" aby wyświetlić opis kategorii na stronie indeksu i kategorii. ");
+define('_MI_IMFAQ_TOPCAT_DSC_COUNT', 'Maksymalna długość opisu kategorii');
+define('_MI_IMFAQ_TOPCAT_DSC_COUNTDSC', "Określ, ile znaków zostanie wyświetlonych w opisie kategorii.");
+define('_MI_IMFAQ_DISPLAY_SUBCAT_INDEX', 'Wyświetlać podkategorie na stronie indeksu?');
+define('_MI_IMFAQ_DISPLAY_SUBCAT_INDEXDSC', "Wybierz \"Tak\" aby wyświetlić podkategorie na stronie indeksu.");
+define('_MI_IMFAQ_DISPLAY_SUBCAT_DSC', 'Wyświetlać opisy podkategorii na górze?');
+define('_MI_IMFAQ_DISPLAY_SUBCAT_DSCDSC', "Wybierz \"Tak\" aby wyświetlić opisy podkategorii na stronie indeksu i kategorii.");
+define('_MI_IMFAQ_SUBCAT_DSC_COUNT', 'Maksymalna długość opisu podkategorii');
+define('_MI_IMFAQ_SUBCAT_DSC_COUNTDSC', "Określ, ile znaków zostanie wyświetlonych w opisie podkategorii.");
+define('_MI_IMFAQ_DISPLAY_FAQ_ANSWER_SUBCAT', 'Wyświetlać odpowiedzi na podkategorie?');
 define('_MI_IMFAQ_DISPLAY_FAQ_ANSWER_SUBCATDSC', " ");
-define('_MI_IMFAQ_FAQ_ANSWER_COUNT_SUBCAT', 'Max-length of the FAQ Answer on sub-categories page');
-define('_MI_IMFAQ_FAQ_ANSWER_COUNT_SUBCATDSC', "Define how much characters will be displayed in the FAQ Answer on sub-categories page.");
-define('_MI_IMFAQ_AUTOAPPROVE_SUB_FAQ', 'Auto approve submitted FAQs?');
-define('_MI_IMFAQ_AUTOAPPROVE_SUB_FAQDSC', 'Auto approves submitted FAQs without admin intervention.');
-define('_MI_IMFAQ_SHOW_FAQ_INFO', 'Show FAQs info?');
-define('_MI_IMFAQ_SHOW_FAQ_INFO_DSC', 'Select "YES" to show the FAQ author, published date and counter.');
-define("_MI_IMFAQ_LIMIT", "Faqs limit");
-define("_MI_IMFAQ_LIMITDSC", "Number of faqs to display on user side.");
-define("_MI_IMFAQ_CATSLIMIT", "Categories limit");
-define("_MI_IMFAQ_CATSLIMITDSC", "Number of cateogries to display on user side.");
-define("_MI_IMFAQ_SEOMODNAME", "SEO module name");
-define("_MI_IMFAQ_SEOMODNAMEDSC", "This will be used when generating SEO URL. The name you choose here also needs to be used to customize your htaccess file.");
-define("_MI_IMFAQ_SEOMODE", "SEO mode");
-define("_MI_IMFAQ_SEOMODEDSC", "Choose from SEO technique.");
-define('_MI_IMFAQ_REQUESTINTROMSG', 'Request introduction message');
-define('_MI_IMFAQ_REQUESTINTROMSGDSC', 'Introduction message to be displayed in the Request a FAQ page of the module.');
-define('_MI_IMFAQ_REQUESTINTROMSG_DEF', "You did not find the answer to the question you were looking for? No problem! Simply fill the following form in order to request the answer for a new question. The site administrator will review your request and publish this new question in the Open Questions section for someone to answer it!"); 
-define("_MI_IMFAQ_HEADER", "Index welcome message");
-define("_MI_IMFAQ_HEADERDSC", "Welcome message to be displayed in the index page of the module.");
-define('_MI_IMFAQ_HEADER_DEF', "In this area of our site, you will find the answers to the frequently asked questions. Please feel free to post a comment on any FAQ.");
-define("_MI_IMFAQ_FOOTER", "Module Footer Text");
-define("_MI_IMFAQ_FOOTERDSC", "The content you put here will be shown in all pages of the module on user side. Leave empty to not show.");
+define('_MI_IMFAQ_FAQ_ANSWER_COUNT_SUBCAT', 'Maksymalna długość odpowiedzi na podkategorie');
+define('_MI_IMFAQ_FAQ_ANSWER_COUNT_SUBCATDSC', "Określ, ile znaków zostanie wyświetlonych w odpowiedzi na podkategorie.");
+define('_MI_IMFAQ_AUTOAPPROVE_SUB_FAQ', 'Autoaprobowanie zgłoszeń FAQ?');
+define('_MI_IMFAQ_AUTOAPPROVE_SUB_FAQDSC', 'Autoaprobowanie zgłoszeń FAQ bez interwencji administratora.');
+define('_MI_IMFAQ_SHOW_FAQ_INFO', 'Wyświetlać informacje o FAQ?');
+define('_MI_IMFAQ_SHOW_FAQ_INFO_DSC', 'Wybierz "Tak" aby wyświetlić autora FAQ, datę publikacji i liczbę wyświetleń.');
+define("_MI_IMFAQ_LIMIT", "Limit liczby FAQ");
+define("_MI_IMFAQ_LIMITDSC", "Liczba FAQ do wyświetlenia na stronie użytkownika.");
+define("_MI_IMFAQ_CATSLIMIT", "Limit liczby kategorii");
+define("_MI_IMFAQ_CATSLIMITDSC", "Liczba kategorii do wyświetlenia na stronie użytkownika.");
+define("_MI_IMFAQ_SEOMODNAME", "Nazwa modułu SEO");
+define("_MI_IMFAQ_SEOMODNAMEDSC", "To zostanie użyte przy tworzeniu adresów URL SEO. Wybierz nazwę tutaj, aby ją użyć do dostosowania pliku htaccess.");
+define("_MI_IMFAQ_SEOMODE", " tryb SEO");
+define("_MI_IMFAQ_SEOMODEDSC", "Wybierz metodę SEO.");
+define('_MI_IMFAQ_REQUESTINTROMSG', 'Żądanie wiadomości wstępnej');
+define('_MI_IMFAQ_REQUESTINTROMSGDSC', 'Wiadomość wstępna do wyświetlenia na stronie żądania FAQ modułu.');
+define('_MI_IMFAQ_REQUESTINTROMSG_DEF', "Nie znaleziono odpowiedzi na Twoje pytanie? Nie ma problemu! Proste wyświetlenie formularza, aby złożyć prośbę o odpowiedź na nowe pytanie. Administrator skontaktuje się z Tobą i opublikuje to pytanie w sekcji pytań otwartych, aby ktoś odpowiedział!"); 
+define("_MI_IMFAQ_HEADER", "Tutaj znajdziesz odpowiedzi na często zadawane pytania. Proszę się zwolnić, aby wysłać komentarz do każdej FAQ.");
+define("_MI_IMFAQ_HEADERDSC", "Witamy w tej części naszej strony, gdzie znajdziesz odpowiedzi na często zadawane pytania. Proszę się zwolnić, aby wysłać komentarz do każdej FAQ.");
+define('_MI_IMFAQ_HEADER_DEF', "W tej części naszej strony znajdziesz odpowiedzi na często zadawane pytania. Proszę się zwolnić, aby wysłać komentarz do każdej FAQ.");
+define("_MI_IMFAQ_FOOTER", "Tekst stopki modułu");
+define("_MI_IMFAQ_FOOTERDSC", "Treść, jaka zostanie wyświetlona w wszystkich stronach modułu na stronie użytkownika. Pozostaw puste, aby jej nie wyświetlać.");
 define("_MI_IMFAQ_FOOTER_DEF", "");
-define('_MI_IMFAQ_USEREALNAME', 'Use the Real Name of users?');
-define('_MI_IMFAQ_USEREALNAMEDSC', 'When displaying a username, use the real name of that user if he has a set his real name.');
-define('_MI_IMFAQ_DEFAULT_CATVIEWPERM', 'Default Category View Permission');
-define('_MI_IMFAQ_DEFAULT_CATVIEWPERMDSC', 'Define the groups that will have by default view permission of each category. When creating or editing a category you can always change the permissions.');
-define('_MI_IMFAQ_DEFAULT_CATWRITEPERM', 'Default Category Write Permission');
-define('_MI_IMFAQ_DEFAULT_CATWRITEPERMDSC', 'Define the groups that will have by default write permission of each category. When creating or editing a category you can always change the permissions.');
-define('_MI_IMFAQ_ENABLEATTACHMENTS', 'Enable the Attachment feature?');
+define('_MI_IMFAQ_USEREALNAME', 'Używać prawdziwej nazwy użytkownika?');
+define('_MI_IMFAQ_USEREALNAMEDSC', 'Jeśli użytkownik ma ustawioną swoją prawdziwą nazwę, użyj jej.');
+define('_MI_IMFAQ_DEFAULT_CATVIEWPERM', 'Domyślne uprawnienia widoku kategorii');
+define('_MI_IMFAQ_DEFAULT_CATVIEWPERMDSC', 'Wybierz grupy z poziomu uprawnień widoku domyślnych dla każdej kategorii. Możesz zawsze zmienić uprawnienia podczas tworzenia lub edycji kategorii.');
+define('_MI_IMFAQ_DEFAULT_CATWRITEPERM', 'Domyślne uprawnienia pisania kategorii');
+define('_MI_IMFAQ_DEFAULT_CATWRITEPERMDSC', 'Wybierz grupy z poziomu uprawnień pisania domyślnych dla każdej kategorii. Możesz zawsze zmienić uprawnienia podczas tworzenia lub edycji kategorii.');
+define('_MI_IMFAQ_ENABLEATTACHMENTS', 'Włącz funkcję przytwierdzania plików?');
 define('_MI_IMFAQ_ENABLEATTACHMENTSDSC', 'The attachment feature allow you "attach" items for other modules in the FAQ. The attachment feature uses plugins to connect other modules and allow select and show their contents. Select "'._YES.'" to show the option in the FAQ form on admin side.');
 
-define('_MI_IMFAQ_CATEGS_ORDER', 'Sort Categories/Subcategories by');
-define('_MI_IMFAQ_CATEGS_ORDERDSC', 'Select how to sort the categories/subcategories list on index page.');
-define('_MI_IMFAQ_FAQS_ORDER', 'Sort FAQs by');
-define('_MI_IMFAQ_FAQS_ORDERDSC', 'Select how tp sort the FAQs list on categories page.');
+define('_MI_IMFAQ_CATEGS_ORDER', 'Sortowanie kategorii/podkategorii');
+define('_MI_IMFAQ_CATEGS_ORDERDSC', 'Wybierz sposób, jak sortować listę kategorii/podkategorii na stronie indeksu.');
+define('_MI_IMFAQ_FAQS_ORDER', 'Sortowanie FAQ');
+define('_MI_IMFAQ_FAQS_ORDERDSC', 'Wybierz sposób, jak sortować listę FAQ na stronie kategorii.');
 
-define('_MI_IMFAQ_SORT_WEIGHT', 'Weight');
-define('_MI_IMFAQ_SORT_PUBDATEASC', 'Published Date ASC');
-define('_MI_IMFAQ_SORT_PUBDATEDESC', 'Published Date DESC');
+define('_MI_IMFAQ_SORT_WEIGHT', 'Waga');
+define('_MI_IMFAQ_SORT_PUBDATEASC', 'Publikowana data ASC');
+define('_MI_IMFAQ_SORT_PUBDATEDESC', 'Publikowana data DESC');
 
 // Notifications
-define('_MI_IMFAQ_GLOBAL_FAQ_NOTIFY', "Global Faqs");
-define('_MI_IMFAQ_GLOBAL_FAQ_NOTIFY_DSC', "Notification options that apply to all FAQs.");
+define('_MI_IMFAQ_GLOBAL_FAQ_NOTIFY', "Faqs globalne");
+define('_MI_IMFAQ_GLOBAL_FAQ_NOTIFY_DSC', "Opcje notyfikacji dla wszystkich FAQ");
 
 define('_MI_IMFAQ_FAQ_NOTIFY', "FAQ");
-define('_MI_IMFAQ_FAQ_NOTIFY_DSC', "Notification options that apply to the current FAQ.");
+define('_MI_IMFAQ_FAQ_NOTIFY_DSC', "Opcje notyfikacji dla tej FAQ");
 
-define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY', "FAQ submitted");
-define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY_CAP', "Notify me when any FAQ is submitted and is awaiting approval.");
-define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY_DSC', "Receive notification when any FAQ is submitted and is waiting approval.");
-define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY_SBJ', "[{X_SITENAME}] {X_MODULE} auto-notify : New FAQ submitted");
+define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY', "FAQ zgłoszony");
+define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY_CAP', "Uwaga mnie, gdy jakiekolwiek FAQ zostanie zgłoszone i czeka na aprobatę.");
+define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY_DSC', "Otrzymaj powiadomienie, gdy jakiekolwiek FAQ zostanie zgłoszone i czeka na aprobatę.");
+define('_MI_IMFAQ_GLOBAL_FAQ_SUBMITTED_NOTIFY_SBJ', "[\\{X_SITENAME
+}] \\{X_MODULE
+} auto-notify : New FAQ submitted");
 
-define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY', "FAQ approved");
-define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY_CAP', "Notify me when this FAQ is approved.");
-define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY_DSC', "Receive notification when this FAQ is approved.");
-define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY_SBJ', "[{X_SITENAME}] {X_MODULE} auto-notify : FAQ approved");
+define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY', "FAQ zatwierdzony");
+define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY_CAP', "Uwaga mnie, gdy ta FAQ zostanie zatwierdzona.");
+define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY_DSC', "Otrzymaj powiadomienie, gdy ta FAQ zostanie zatwierdzona.");
+define('_MI_IMFAQ_FAQ_APPROVED_NOTIFY_SBJ', "[\\{X_SITENAME
+}] \\{X_MODULE
+} auto-notify : FAQ approved");
 
-define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY", "New FAQ");
-define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_CAP", "Notify me when any new FAQ is published.");
+define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY", "Nowy FAQ");
+define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_CAP", "Uwaga mnie, gdy jakiekolwiek nowe FAQ zostanie opublikowane.");
 define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_DSC", "");
-define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_SBJ", "[{X_SITENAME}] {X_MODULE} auto-notify : New FAQ published");
+define("_MI_IMFAQ_GLOBAL_FAQ_NEW_NOTIFY_SBJ", "[\\{X_SITENAME
+}] \\{X_MODULE
+} auto-notify : New FAQ published");
 
 define("_MI_IMFAQ_TEASERTEXT", "Set characters num. for teaser text");
 define("_MI_IMFAQ_TEASERTEXTDSC", "Tags alloweg in teaser text are: strong, p, em, h4, h5, a, ul, li");
